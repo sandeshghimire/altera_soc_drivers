@@ -1,6 +1,15 @@
 #include <linux/init.h>
 #include <linux/module.h>
 
+
+
+
+#include "gpio.h"
+
+
+
+
+
 static int my_init(void) {
 	return 0;
 }

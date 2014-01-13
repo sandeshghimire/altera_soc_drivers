@@ -1,0 +1,12 @@
+#!/usr/bin/bash
+
+export KERNELDIR=/opt/avr32/KERNELDIR
+export CC=avr32-buildroot-linux-uclibc-gcc
+export CXX=avr32-buildroot-linux-uclibc-g++
+export GDB=avr32-buildroot-linux-uclibc-gdb
+export TARGET_PREFIX=avr32-buildroot-linux-uclibc-
+export PATH=/opt/avr32/cc/bin:$PATH
+export ARCH=avr32
+export CROSS_COMPILE=avr32-buildroot-linux-uclibc-
+export ENVIRONMENT_SET=Yes
+echo "Environment set."

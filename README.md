@@ -1,2 +1,2 @@
-altera_soc_drivers
-==================
+atmel-avr32-ngw100-drivers
+==========================

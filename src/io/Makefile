@@ -9,17 +9,19 @@ ifeq ($(KERNELRELEASE),)
     # Assume the source tree is where the running kernel was built
     # You should set KERNELDIR in the environment if it's elsewhere
     KERNELDIR ?= /opt/rp/KERNELDIR/linux-headers-3.6.11
+     
     # The current directory is passed to sub-makes as argument
     PWD := $(shell pwd)
+    INCLUDEPATH ?= ../include
 
 modules:
-	$(MAKE) -C $(KERNELDIR) M=$(PWD) modules
+	$(MAKE) -C  $(KERNELDIR) M=$(PWD) modules
 
 modules_install:
-	$(MAKE) -C $(KERNELDIR) M=$(PWD) modules_install
+	$(MAKE) -C   $(KERNELDIR) M=$(PWD) modules_install
 
 clean:
-	rm -rf *.o *~ core .depend .*.cmd *.ko *.mod.c .tmp_versions
+	rm -rf *.o *~ core .depend .*.cmd *.ko *.mod.c .tmp_versions *.symvers *.order *.cmd
 
 .PHONY: modules modules_install clean
 

@@ -1,12 +1,9 @@
 #!/usr/bin/bash
 
-export KERNELDIR=/opt/avr32/KERNELDIR
-export CC=avr32-buildroot-linux-uclibc-gcc
-export CXX=avr32-buildroot-linux-uclibc-g++
-export GDB=avr32-buildroot-linux-uclibc-gdb
-export TARGET_PREFIX=avr32-buildroot-linux-uclibc-
-export PATH=/opt/avr32/cc/bin:$PATH
-export ARCH=avr32
-export CROSS_COMPILE=avr32-buildroot-linux-uclibc-
+export KERNELDIR=/opt/altera-br/kernel/linux-ACDS13.1_REL_GSRD_PR
+export PATH=/opt/altera-br/toolchain/usr/bin:$PATH
+export ARCH=arm
+export TARGET_PREFIX=arm-buildroot-linux-uclibcgnueabi-
+export CROSS_COMPILE=arm-buildroot-linux-uclibcgnueabi-
 export ENVIRONMENT_SET=Yes
 echo "Environment set."
